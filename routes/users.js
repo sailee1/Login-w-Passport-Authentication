@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router() 
 
+//User model 
+const User = require('../models/User')
+
 //Login page
 router.get('/login', (req, res) => res.render('login'))
 
@@ -39,6 +42,7 @@ router.post('/register', (req, res) => {
         })
     } else{ 
        //Validation passed
+
     }
 })
 
