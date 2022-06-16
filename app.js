@@ -10,6 +10,10 @@ connectDB()
 
 const app = express()
 
+//Routes 
+app.use('/', require('./routes/index'))
+app.use('/users', require('./routes/users'))
+
 app.set('view engine', 'ejs')
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
